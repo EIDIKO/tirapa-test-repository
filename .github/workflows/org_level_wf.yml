@@ -1,0 +1,18 @@
+name: "Org Level Workflow"
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    # The branches below must be a subset of the branches above
+    branches: [ "main" ]
+  schedule:
+    - cron: '28 0 * * 1'
+
+jobs:
+  monitor-ssa-issues:
+    runs-on: ubuntu-latest 
+    steps:
+      - name: Organization Level Webhook Testing
+        id: org-level-webhook-teting
+        run: |
+          echo "ORG LEVEL WEBHOOK trigger"
