@@ -1,4 +1,4 @@
-name: "Org Level Workflow"
+name: "tirapa-test-repository"
 on:
   push:
     branches: [ "main" ]
